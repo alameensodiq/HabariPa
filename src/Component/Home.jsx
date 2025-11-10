@@ -5,6 +5,7 @@ import AuthenticationButton from "../Reusables/AuthenticationButton";
 import { useForm } from "react-hook-form";
 import { useLoginMutation } from "../Store/auth";
 import toast from "react-hot-toast";
+import { user } from "../Routes";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -23,30 +24,31 @@ const Home = () => {
   const [login, { isLoading }] = useLoginMutation();
 
   const onSubmit = async (data) => {
-    try {
-      const response = await login(data).unwrap();
-      console.log(response);
+    navigate(user);
+    // try {
+    //   const response = await login(data).unwrap();
+    //   console.log(response);
 
-      //   if (response?.token) {
-      //     toast.success("Login successful!");
-      //     reset();
-      //     sessionStorage.setItem("token", response?.token);
-      //     sessionStorage.setItem("userId", response?.id);
-      //     // navigate(user);
-      //   }
-    } catch (error) {
-      // console.error("Login error:", error);
-      const errorName =
-        error?.data?.errors?.[0]?.detail ||
-        error?.error ||
-        "An unexpected error occurred. Please try again.";
-      if (errorName) {
-        toast.error(errorName);
-      }
-    }
+    //     if (response?.token) {
+    //       toast.success("Login successful!");
+    //       reset();
+    //       sessionStorage.setItem("token", response?.token);
+    //       sessionStorage.setItem("userId", response?.id);
+    //       // navigate(user);
+    //     }
+    // } catch (error) {
+    //   // console.error("Login error:", error);
+    //   const errorName =
+    //     error?.data?.errors?.[0]?.detail ||
+    //     error?.error ||
+    //     "An unexpected error occurred. Please try again.";
+    //   if (errorName) {
+    //     toast.error(errorName);
+    //   }
+    // }
   };
   return (
-    <div className="flex flex-row bg-[#FAFAFA] w-[100vw] min-h-[100vh]">
+    <div className="flex flex-row bg-[#FAFAFA] w-[100vw] h-[100vh]">
       <div className="flex-col justify-end items-center gap-35 lg:w-[45%] md:w-[45%] hidden sm:flex pt-86 pb-16">
         {/* <img
           src={Printing}

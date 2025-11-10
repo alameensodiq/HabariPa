@@ -19,13 +19,6 @@ const UserDashboardIndex = () => {
   }, []);
 
   const token = sessionStorage.getItem("token");
-  const refresh = sessionStorage.getItem("refresh");
-  const user = sessionStorage.getItem("user");
-  const role = sessionStorage.getItem("role");
-
-  const allowedRoles = ["checker", "verifier", "approver"];
-  //   const isAuthenticated =
-  //     token && refresh && user && allowedRoles.includes(role);
   const isAuthenticated = token;
 
   const Authenticated = () => {
@@ -52,7 +45,7 @@ const UserDashboardIndex = () => {
 
   // return <Authenticated />;
 
-  return sessionStorage.getItem("token") ? (
+  return !sessionStorage.getItem("token") ? (
     //  &&
     //   sessionStorage.getItem("refresh") &&
     //   sessionStorage.getItem("user") &&
