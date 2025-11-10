@@ -20,8 +20,8 @@ function BarChart({ data }) {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "45%",
-        borderRadius: 8, // rounded corners
+        // columnWidth: "45%",
+        // borderRadius: 8, // rounded corners
         borderRadiusApplication: "end", // only round top (for vertical bars)
         distributed: false // all bars same color
         // colors: {
@@ -54,7 +54,7 @@ function BarChart({ data }) {
       labels: { show: true }
     },
     fill: {
-      colors: ["#0da32d"],
+      colors: ["#4baa60"],
       opacity: 1
     },
     // states: {

@@ -217,6 +217,151 @@ const UserMarketing = () => {
             </div>
             <BarChart />
           </div>
+          <div className="border-[0.5px] border-black flex flex-col gap-4 rounded-[4px] px-3 pt-4 pb-2 bg-[#FFFFFF] w-full lg:w-[50%]">
+            <div className="flex flex-col md:flex-row justify-between items-center px-2">
+              <div className="flex flex-col gap-2">
+                <span className="text-[18px] text-[#141414] font-bold">
+                  Budget by Platform
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row items-center w-[100%] gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-x-icon lucide-x"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+              <div className="w-[90%]  flex flex-col gap-1">
+                <div className="flex flex-row justify-between items-center">
+                  <span className="text-[12px] text-black">
+                    Remaining:$12,678
+                  </span>
+                  <span className="text-[12px] text-black">60%</span>
+                </div>
+                <div className="w-[100%] rounded-[8px] bg-[#c4e5cb] h-[10px]">
+                  <div className="w-[60%] rounded-[8px] bg-[#4baa60] h-[10px]"></div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-center w-[100%] gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook-icon lucide-facebook"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+              <div className="w-[90%]  flex flex-col gap-1">
+                <div className="flex flex-row justify-between items-center">
+                  <span className="text-[12px] text-black">
+                    Remaining:$12,678
+                  </span>
+                  <span className="text-[12px] text-black">60%</span>
+                </div>
+                <div className="w-[100%] rounded-[8px] bg-[#c4e5cb] h-[10px]">
+                  <div className="w-[60%] rounded-[8px] bg-[#4baa60] h-[10px]"></div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-center w-[100%] gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook-icon lucide-facebook"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+              <div className="w-[90%]  flex flex-col gap-1">
+                <div className="flex flex-row justify-between items-center">
+                  <span className="text-[12px] text-black">
+                    Remaining:$12,678
+                  </span>
+                  <span className="text-[12px] text-black">60%</span>
+                </div>
+                <div className="w-[100%] rounded-[8px] bg-[#c4e5cb] h-[10px]">
+                  <div className="w-[60%] rounded-[8px] bg-[#4baa60] h-[10px]"></div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-center w-[100%] gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook-icon lucide-facebook"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+              <div className="w-[90%]  flex flex-col gap-1">
+                <div className="flex flex-row justify-between items-center">
+                  <span className="text-[12px] text-black">
+                    Remaining:$12,678
+                  </span>
+                  <span className="text-[12px] text-black">60%</span>
+                </div>
+                <div className="w-[100%] rounded-[8px] bg-[#e3735d] h-[10px]">
+                  <div className="w-[60%] rounded-[8px] bg-[#d51010] h-[10px]"></div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-center w-[100%] gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook-icon lucide-facebook"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+              <div className="w-[90%]  flex flex-col gap-1">
+                <div className="flex flex-row justify-between items-center">
+                  <span className="text-[12px] text-black">
+                    Remaining:$12,678
+                  </span>
+                  <span className="text-[12px] text-black">60%</span>
+                </div>
+                <div className="w-[100%] rounded-[8px] bg-[#e8de32] h-[10px]">
+                  <div className="w-[60%] rounded-[8px] bg-[#9e8c15] h-[10px]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
