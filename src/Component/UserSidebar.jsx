@@ -339,7 +339,7 @@ const UserSidebar = ({ isSmallScreen }) => {
                 : "flex flex-row justify-center items-center gap-3"
             }`}
           >
-            <div className="bg-[#aef16e] w-[20px] h-[20px] flex flex-row justify-center items-center p-4">
+            <div className="bg-[#aef16e] w-[20px] h-[20px] flex flex-row justify-center items-center p-4 rounded-[4px]">
               <span className="font-bold text-black text-[25px]">B</span>
             </div>
             <span className="font-bold text-black text-[20px]">ritualism</span>
