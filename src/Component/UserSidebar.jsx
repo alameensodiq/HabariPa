@@ -6,6 +6,7 @@ import { UserLogOut } from "../utils/UserLogout";
 
 const UserSidebar = ({ isSmallScreen }) => {
   const router = useLocation();
+  const [openMenu, setOpenMenu] = useState(null);
 
   const data = [
     {
@@ -243,7 +244,14 @@ const UserSidebar = ({ isSmallScreen }) => {
         </svg>
       ),
       link: "#",
-      carat: true
+      carat: true,
+      children: [
+        { name: "Calendar", link: "/app/calendar" },
+        { name: "Email", link: "/app/email" },
+        { name: "Invoice", link: "/app/invoice" },
+        { name: "Charts", link: "/app/charts" },
+        { name: "Widgets", link: "/app/widgets" }
+      ]
     },
     {
       id: 11,
@@ -327,9 +335,7 @@ const UserSidebar = ({ isSmallScreen }) => {
           : "w-[19.4%] flex flex-col py-7 bg-[#F5F5F5] overflow-y-auto border-r border-black"
       }`}
     >
-      <div className="flex flex-row justify-center">
-        {/* <img src={Firslogo} className="w-[100%] md:w-[49%] lg:w-[74%]" /> */}
-      </div>
+      <div className="flex flex-row justify-center"></div>
       <div className="pt-2 flex flex-col gap-4">
         <div className="flex flex-col gap-1 items-start pl-8 pr-1">
           <div
@@ -346,60 +352,84 @@ const UserSidebar = ({ isSmallScreen }) => {
           </div>
         </div>
         <div className="flex flex-col gap-1 items-start pl-4 pr-1">
-          {/* <div
-            className={`${
-              isSmallScreen ? "hidden" : "flex flex-row justify-start px-3"
-            }`}
-          >
-            <span className="font-geist text-deepprimarycolor text-[12px]">
-              MAIN
-            </span>
-          </div> */}
-          {data?.map((item) => (
-            <Link
-              key={item.id}
-              to={item?.link}
-              className={`${
-                router.pathname === item?.link ||
-                router.pathname === `${user}/${item?.link}`
-                  ? "bg-[#FFFFFF] flex flex-row justify-between rounded-[2px] py-[8px] px-[12px] gap-3 items-center w-[97%] border-[1px] border-[#000000]"
-                  : "flex flex-row justify-between py-[8px] px-[12px] gap-3 items-center w-[97%]"
-              }`}
-            >
-              <div className="flex flex-row items-center gap-2">
-                {item?.image}
-                <span
+          {data?.map((item) => {
+            const isActive =
+              router.pathname === item.link ||
+              router.pathname.startsWith(item.link);
+            const hasChildren = item.children && item.children.length > 0;
+            const isOpen = openMenu === item.id;
+
+            return (
+              <div key={item.id} className="flex flex-col w-full">
+                <div
+                  onClick={() => {
+                    if (hasChildren) {
+                      setOpenMenu(isOpen ? null : item.id);
+                    }
+                  }}
                   className={`
-        text-[14px]
-        ${isSmallScreen ? "hidden" : "font-geist"}
-        ${
-          router.pathname === `${user}/${item?.link}`
-            ? "text-black font-semibold"
-            : "text-deepprimarycolor text-black"
-        }
-      `}
+            flex items-center justify-between w-[97%] py-[8px] px-[12px] cursor-pointer select-none
+            ${
+              isActive
+                ? "bg-white rounded-[2px] border border-black"
+                : "hover:bg-gray-50"
+            }
+          `}
                 >
-                  {item?.name}
-                </span>
+                  <div className="flex items-center gap-2 flex-1">
+                    <div className="flex-shrink-0">{item.image}</div>
+                    <span
+                      className={`
+                text-[14px] ${isSmallScreen ? "hidden" : "font-geist"}
+                ${isActive ? "text-black font-semibold" : "text-black"}
+                whitespace-nowrap
+              `}
+                    >
+                      {item.name}
+                    </span>
+                  </div>
+                  <div className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+                    {item.carat && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="black"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className={`transition-transform duration-200 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      >
+                        <path d={isOpen ? "m6 15 6-6 6 6" : "m6 9 6 6 6-6"} />
+                      </svg>
+                    )}
+                  </div>
+                </div>
+                {hasChildren && isOpen && (
+                  <div className="ml-8 mt-1 space-y-1">
+                    {item.children.map((child, idx) => (
+                      <Link
+                        key={idx}
+                        to={child.link}
+                        className={`
+          flex items-center gap-2 py-2 pl-4 pr-6 text-[13px] font-geist text-black
+          hover:text-black hover:bg-gray-100 rounded transition no-underline
+          ${router.pathname === child.link ? "font-medium bg-gray-50" : ""}
+        `}
+                        style={{ color: "black" }} // ← Force black
+                      >
+                        <span className="whitespace-nowrap">{child.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-              {item?.carat && (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-chevron-down-icon lucide-chevron-down"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              )}
-            </Link>
-          ))}
+            );
+          })}
         </div>
 
         <div className="px-10">
