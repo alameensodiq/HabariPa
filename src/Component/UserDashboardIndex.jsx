@@ -24,7 +24,7 @@ const UserDashboardIndex = () => {
   const Authenticated = () => {
     return (
       // <AdminDashboardIndex.Wrapper show={show} open={open} setOpen={setOpen}>
-      <div className="flex h-screen w-full bg-[#F8F8F8]">
+      <div className="flex h-screen w-full bg-[#F5F5F5]">
         <UserSidebar
           open={open}
           setOpen={setOpen}

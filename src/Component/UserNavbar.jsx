@@ -4,7 +4,7 @@ import NavbarSearchInput from "../Reusables/NavbarSearchInput";
 const UserNavbar = ({ title = "Dashboard" }) => {
   const [showDatePicker, setShowDatePicker] = useState(false);
   return (
-    <div className="bg-[#FAFAFA] sticky top-0 z-50  py-5 lg:pl-6 lg:pr-9 md:pl-6 md:pr-9  flex   flex-row lg:flex-row md:flex-row justify-between items-center border-b-[0.2px] border-[#e5dede]">
+    <div className="bg-[#F5F5F5] sticky top-0 z-50  py-5 lg:pl-6 lg:pr-9 md:pl-6 md:pr-9  flex   flex-row lg:flex-row md:flex-row justify-between items-center border-b border-black">
       <NavbarSearchInput />
       <div className="flex flex-row items-center gap-2">
         <svg

@@ -54,7 +54,7 @@ function BarChart({ data }) {
       labels: { show: true }
     },
     fill: {
-      colors: ["#4baa60"],
+      colors: ["#aef16e"],
       opacity: 1
     },
     // states: {
