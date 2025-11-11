@@ -334,9 +334,14 @@ const UserSidebar = ({ isSmallScreen }) => {
         <div className="flex flex-col gap-1 items-start pl-8 pr-1">
           <div
             className={`${
-              isSmallScreen ? "hidden" : "flex flex-row justify-center"
+              isSmallScreen
+                ? "hidden"
+                : "flex flex-row justify-center items-center gap-3"
             }`}
           >
+            <div className="bg-[#aef16e] w-[20px] h-[20px] flex flex-row justify-center items-center p-4">
+              <span className="font-bold text-black text-[25px]">B</span>
+            </div>
             <span className="font-bold text-black text-[20px]">ritualism</span>
           </div>
         </div>
