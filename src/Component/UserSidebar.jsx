@@ -362,8 +362,8 @@ const UserSidebar = ({ isSmallScreen }) => {
               className={`${
                 router.pathname === item?.link ||
                 router.pathname === `${user}/${item?.link}`
-                  ? "bg-[#FFFFFF] flex flex-row justify-between rounded-[2px] py-[12px] px-[12px] gap-3 items-center w-[97%] border-[1px] border-[#000000]"
-                  : "flex flex-row justify-between py-[12px] px-[12px] gap-3 items-center w-[97%]"
+                  ? "bg-[#FFFFFF] flex flex-row justify-between rounded-[2px] py-[8px] px-[12px] gap-3 items-center w-[97%] border-[1px] border-[#000000]"
+                  : "flex flex-row justify-between py-[8px] px-[12px] gap-3 items-center w-[97%]"
               }`}
             >
               <div className="flex flex-row items-center gap-2">
@@ -402,8 +402,8 @@ const UserSidebar = ({ isSmallScreen }) => {
           ))}
         </div>
 
-        <div className="p-10">
-          <div className="px-6 py-2 mt-4  gap-2 flex flex-col bg-white border-[0.5px] border-black">
+        <div className="px-10">
+          <div className="px-6 py-2 mt-2  gap-2 flex flex-col bg-white border-[0.5px] border-black">
             <span className="text-[16px] font-bold text-black">
               Upgrade to Pro
             </span>

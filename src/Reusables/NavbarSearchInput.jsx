@@ -2,7 +2,7 @@ import React from "react";
 
 const NavbarSearchInput = () => {
   return (
-    <div className="hidden md:flex w-[32%]">
+    <div className="hidden md:flex w-[22%]">
       <input
         type="text"
         placeholder="Search"
