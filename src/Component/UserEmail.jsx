@@ -1,5 +1,7 @@
 import React from "react";
 import UserNavbar from "./UserNavbar";
+import NavbarSearchInput from "../Reusables/NavbarSearchInput";
+import EmailInputWrapper from "../Reusables/EmailInputWrapper";
 
 const UserEmail = () => {
   const data = [
@@ -210,6 +212,8 @@ const UserEmail = () => {
       number: 30
     }
   ];
+
+  const emails = [1, 2, 3, 4];
   return (
     <div className="flex flex-col">
       <UserNavbar />
@@ -292,6 +296,15 @@ const UserEmail = () => {
                 </div>
               );
             })}
+          </div>
+          <div className="md:w-[80%] flex flex-col p-3 gap-3">
+            <div className="flex flex-row justify-between items-center">
+              <span className="text-black text-[16px] font-bold">Inbox</span>
+              <NavbarSearchInput />
+            </div>
+            {emails?.map((item) => (
+              <EmailInputWrapper />
+            ))}
           </div>
         </div>
       </div>
