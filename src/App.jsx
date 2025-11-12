@@ -11,7 +11,8 @@ import {
 import { Loader } from "./utils/Loader";
 import UserMarketing from "./Component/UserMarketing";
 import UserDashboardIndex from "./Component/UserDashboardIndex";
-import { user } from "./Routes";
+import { email, user } from "./Routes";
+import UserEmail from "./Component/UserEmail";
 
 const LazyIndexPage = React.lazy(() => import("./Component/Home"));
 
@@ -29,8 +30,8 @@ const router = createBrowserRouter(
       />
       <Route path={user} element={<UserDashboardIndex />}>
         <Route index element={<UserMarketing />} />
-        {/* <Route path={quotes} element={<UserQuotes />} />
-        <Route path={report} element={<UserReport />} />
+        <Route path={email} element={<UserEmail />} />
+        {/* <Route path={report} element={<UserReport />} />
         <Route path={compliance} element={<UserCompliance />} />
         <Route path={settings} element={<UserSettings />} />
         <Route path={help} element={<UserHelp />} />

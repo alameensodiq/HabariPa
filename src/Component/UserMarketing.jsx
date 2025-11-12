@@ -20,9 +20,9 @@ const UserMarketing = () => {
     }
   ];
   return (
-    <div className="flex flex-col bg-red">
+    <div className="flex flex-col">
       {" "}
-      <UserNavbar title="Business" />
+      <UserNavbar />
       <div className="flex flex-col px-[25px] py-5 gap-5">
         <div className="flex flex-row justify-between items-center">
           <span className="text-black">Marketing</span>

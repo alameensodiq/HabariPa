@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import Firslogo from "../../assets/firslogo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { user } from "../Routes";
+import { email, user } from "../Routes";
 import { UserLogOut } from "../utils/UserLogout";
 
 const UserSidebar = ({ isSmallScreen }) => {
@@ -246,11 +246,11 @@ const UserSidebar = ({ isSmallScreen }) => {
       link: "#",
       carat: true,
       children: [
-        { name: "Calendar", link: "/app/calendar" },
-        { name: "Email", link: "/app/email" },
-        { name: "Invoice", link: "/app/invoice" },
-        { name: "Charts", link: "/app/charts" },
-        { name: "Widgets", link: "/app/widgets" }
+        { name: "Calendar", link: "#" },
+        { name: "Email", link: `${user}/${email}` },
+        { name: "Invoice", link: "#" },
+        { name: "Charts", link: "#" },
+        { name: "Widgets", link: "#" }
       ]
     },
     {
